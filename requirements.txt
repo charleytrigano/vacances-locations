@@ -6,3 +6,4 @@ python-dotenv
 requests
 icalendar
 openpyxl
+python-dateutil
