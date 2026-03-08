@@ -1,6 +1,5 @@
 import streamlit as st
 from services.reservation_service import load_reservations
-from components.reservation_table import show_table
 
 def show():
 
@@ -8,4 +7,4 @@ def show():
 
     df = load_reservations()
 
-    show_table(df)
+    st.dataframe(df, use_container_width=True)
