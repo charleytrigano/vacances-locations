@@ -1,0 +1,12 @@
+import pandas as pd
+
+def load_reservations():
+
+    df = pd.read_csv("data/reservations.csv")
+
+    df["date_arrivee"] = pd.to_datetime(df["date_arrivee"])
+    df["date_depart"] = pd.to_datetime(df["date_depart"])
+
+    df["nb_nuits"] = (df["date_depart"] - df["date_arrivee"]).dt.days
+
+    return df
