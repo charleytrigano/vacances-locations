@@ -13,6 +13,6 @@ def show():
 
     show_kpis(kpis)
 
-    st.subheader("Dernières réservations")
+    st.subheader("Réservations récentes")
 
     st.dataframe(df.tail(10))
