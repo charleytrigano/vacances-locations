@@ -2,7 +2,7 @@ def compute_kpis(df):
 
     ca_total = df["prix_total"].sum()
 
-    nb_resa = len(df)
+    nb_reservations = len(df)
 
     nuits = df["nb_nuits"].sum()
 
@@ -10,6 +10,6 @@ def compute_kpis(df):
 
     return {
         "ca_total": ca_total,
-        "nb_resa": nb_resa,
+        "nb_reservations": nb_reservations,
         "revenu_nuit": revenu_nuit
     }
