@@ -9,7 +9,10 @@ def sidebar():
         [
             "Dashboard",
             "Réservations",
-            "Analyses"
+            "Calendrier",
+            "Analyses",
+            "Messages",
+            "Paramètres"
         ]
     )
 
