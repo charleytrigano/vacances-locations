@@ -5,7 +5,8 @@ page = st.sidebar.radio(
         "Réservations",
         "Calendrier",
         "Analyses",
-        "Trous de réservation",
+        "Opportunités",
+        "Ménage",
         "Messages",
         "Paramètres"
     ]
