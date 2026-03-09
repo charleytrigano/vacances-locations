@@ -1,9 +1,12 @@
 def payment_status(row):
 
-    if row["acompte"] == 0:
+    acompte = row.get("acompte", 0)
+    prix_total = row.get("prix_total", 0)
+
+    if acompte == 0:
         return "acompte manquant"
 
-    if row["acompte"] < row["prix_total"]:
+    if acompte < prix_total:
         return "solde restant"
 
     return "payé"
