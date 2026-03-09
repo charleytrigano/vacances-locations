@@ -1,9 +1,15 @@
-def suggest_price(base_price, occupation_rate):
+def booking_opportunities(gaps):
 
-    if occupation_rate > 0.8:
-        return base_price * 1.2
+    opportunities = []
 
-    if occupation_rate < 0.4:
-        return base_price * 0.8
+    for gap in gaps:
 
-    return base_price
+        if gap["nuits"] >= 3:
+
+            opportunities.append({
+                "start": gap["start"],
+                "end": gap["end"],
+                "type": "séjour court possible"
+            })
+
+    return opportunities
