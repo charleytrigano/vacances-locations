@@ -1,13 +1,9 @@
-def cleaning_schedule(df):
+def generate_cleaning(df):
 
-    cleanings = []
+    cleanings = df[["appartement", "date_depart"]]
 
-    for _, row in df.iterrows():
-
-        cleanings.append({
-            "appartement": row["appartement"],
-            "date": row["date_depart"],
-            "type": "ménage"
-        })
+    cleanings = cleanings.rename(
+        columns={"date_depart": "date_menage"}
+    )
 
     return cleanings
