@@ -1,16 +1,14 @@
-import pandas as pd
+def reservations_to_events(df):
 
-def build_calendar(df):
-
-    calendar = []
+    events = []
 
     for _, row in df.iterrows():
 
-        calendar.append({
-            "appartement": row["appartement"],
-            "start": row["date_arrivee"],
-            "end": row["date_depart"],
-            "client": row["client_nom"]
+        events.append({
+            "title": row["client_nom"],
+            "start": str(row["date_arrivee"]),
+            "end": str(row["date_depart"]),
+            "resourceId": row["appartement"]
         })
 
-    return pd.DataFrame(calendar)
+    return events
